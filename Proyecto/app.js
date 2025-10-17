@@ -1,24 +1,24 @@
 // =======================================
-// 🧙 Datos base: rutas de imágenes (con "./")
+// 🧙 Datos base: rutas de imágenes desde index.html
 // =======================================
 const partesPersonaje = {
   cabeza: [
-    { nombre: "sombrero de mago", img: "./img/cabezas/sombrero_mago.png" },
-    { nombre: "casco de guerrero", img: "./img/cabezas/casco_guerrero.png" },
-    { nombre: "capucha de ninja", img: "./img/cabezas/capucha_ninja.png" },
-    { nombre: "cinta de explorador", img: "./img/cabezas/cinta_explorador.png" }
+    { nombre: "sombrero de mago", img: "img/cabezas/sombrero_mago.png" },
+    { nombre: "casco de guerrero", img: "img/cabezas/casco_guerrero.png" },
+    { nombre: "capucha de ninja", img: "img/cabezas/capucha_ninja.png" },
+    { nombre: "cinta de explorador", img: "img/cabezas/cinta_explorador.png" }
   ],
   torso: [
-    { nombre: "túnica de mago", img: "./img/torso/tunica_mago.png" },
-    { nombre: "armadura de guerrero", img: "./img/torso/armadura_guerrero.png" },
-    { nombre: "camisa de ninja", img: "./img/torso/camisa_ninja.png" },
-    { nombre: "chaqueta de explorador", img: "./img/torso/chaqueta_explorador.png" }
+    { nombre: "túnica de mago", img: "img/torso/tunica_mago.png" },
+    { nombre: "armadura de guerrero", img: "img/torso/armadura_guerrero.png" },
+    { nombre: "camisa de ninja", img: "img/torso/camisa_ninja.png" },
+    { nombre: "chaqueta de explorador", img: "img/torso/chaqueta_explorador.png" }
   ],
   arma: [
-    { nombre: "bastón mágico", img: "./img/armas/baston_magico.png" },
-    { nombre: "espada de guerrero", img: "./img/armas/espada_guerrero.png" },
-    { nombre: "katana de ninja", img: "./img/armas/katana_ninja.png" },
-    { nombre: "arco de cazador", img: "./img/armas/arco_cazador.png" }
+    { nombre: "bastón mágico", img: "img/armas/baston_magico.png" },
+    { nombre: "espada de guerrero", img: "img/armas/espada_guerrero.png" },
+    { nombre: "katana de ninja", img: "img/armas/katana_ninja.png" },
+    { nombre: "arco de cazador", img: "img/armas/arco_cazador.png" }
   ]
 };
 
