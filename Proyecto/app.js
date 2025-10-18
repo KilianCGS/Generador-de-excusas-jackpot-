@@ -1,6 +1,3 @@
-// =======================================
-// 🧙 Datos base: rutas de imágenes desde index.html
-// =======================================
 const partesPersonaje = {
   cabeza: [
     { nombre: "sombrero de mago", img: "img/cabezas/sombrero_mago.png" },
@@ -22,44 +19,37 @@ const partesPersonaje = {
   ]
 };
 
-// =======================================
-// 🎲 Función para obtener elemento aleatorio
-// =======================================
 const obtenerAleatorio = arreglo => {
   const indice = Math.floor(Math.random() * arreglo.length);
   return arreglo[indice];
 };
 
-// =======================================
-// 🎰 Girar una parte concreta
-// =======================================
 const girarParte = parte => {
   const texto = document.getElementById(parte);
   const imagen = document.getElementById(`img-${parte}`);
-  const contenedor = texto.parentElement;
 
-  contenedor.classList.add("girando");
+  if (imagen.classList.contains("oculto")) {
+    imagen.classList.remove("oculto");
+  }
+
+  imagen.classList.add("img-girando");
 
   setTimeout(() => {
     const seleccion = obtenerAleatorio(partesPersonaje[parte]);
     imagen.src = seleccion.img;
     imagen.alt = seleccion.nombre;
     texto.textContent = seleccion.nombre;
-    contenedor.classList.remove("girando");
+
+    imagen.classList.remove("img-girando");
+
     mostrarDescripcion();
-  }, 400);
+  }, 500);
 };
 
-// =======================================
-// 🌀 Girar todas las partes
-// =======================================
 const girarTodo = () => {
   Object.keys(partesPersonaje).forEach(parte => girarParte(parte));
 };
 
-// =======================================
-// 📜 Mostrar descripción final
-// =======================================
 const mostrarDescripcion = () => {
   const partes = ["cabeza", "torso", "arma"];
   const descripciones = partes.map(p => document.getElementById(p).textContent);

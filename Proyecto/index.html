@@ -4,58 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Generador de Personajes Fantásticos</title>
+
+  <!-- Fuente estilo medieval -->
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="bg-dark text-light text-center py-5">
 
   <div class="container">
-    <h1 class="mb-4 text-warning">⚔️ Generador de Personajes Fantásticos 🧙‍♀️</h1>
+    <h1 class="mb-5 text-warning">⚔️ Generador de Personajes Fantásticos 🧙‍♀️</h1>
 
-    <div class="row justify-content-center g-4">
+    <div class="row justify-content-center g-5">
       <!-- CABEZA -->
       <div class="col-md-3 col-6">
-        <div class="slot p-3 border border-warning rounded bg-gradient bg-secondary shadow-lg">
+        <div class="slot p-5 border border-warning rounded bg-gradient bg-secondary shadow-lg">
           <h5 class="text-warning">Cabeza</h5>
-          <img id="img-cabeza" src="" class="img-fluid rounded mb-2" alt="Cabeza">
-          <p id="cabeza" class="fw-bold fs-6">---</p>
-          <button class="btn btn-warning w-100" onclick="girarParte('cabeza')">Girar</button>
+          <img id="img-cabeza" src="" class="img-fluid rounded mb-3 oculto" alt="Cabeza">
+          <p id="cabeza" class="fw-bold fs-4">---</p>
+          <button class="btn btn-warning w-100 btn-lg" onclick="girarParte('cabeza')">Girar</button>
         </div>
       </div>
 
       <!-- TORSO -->
       <div class="col-md-3 col-6">
-        <div class="slot p-3 border border-warning rounded bg-gradient bg-secondary shadow-lg">
+        <div class="slot p-5 border border-warning rounded bg-gradient bg-secondary shadow-lg">
           <h5 class="text-warning">Torso</h5>
-          <img id="img-torso" src="" class="img-fluid rounded mb-2" alt="Torso">
-          <p id="torso" class="fw-bold fs-6">---</p>
-          <button class="btn btn-warning w-100" onclick="girarParte('torso')">Girar</button>
+          <img id="img-torso" src="" class="img-fluid rounded mb-3 oculto" alt="Torso">
+          <p id="torso" class="fw-bold fs-4">---</p>
+          <button class="btn btn-warning w-100 btn-lg" onclick="girarParte('torso')">Girar</button>
         </div>
       </div>
 
       <!-- ARMA -->
       <div class="col-md-3 col-6">
-        <div class="slot p-3 border border-warning rounded bg-gradient bg-secondary shadow-lg">
+        <div class="slot p-5 border border-warning rounded bg-gradient bg-secondary shadow-lg">
           <h5 class="text-warning">Arma</h5>
-          <img id="img-arma" src="" class="img-fluid rounded mb-2" alt="Arma">
-          <p id="arma" class="fw-bold fs-6">---</p>
-          <button class="btn btn-warning w-100" onclick="girarParte('arma')">Girar</button>
+          <img id="img-arma" src="" class="img-fluid rounded mb-3 oculto" alt="Arma">
+          <p id="arma" class="fw-bold fs-4">---</p>
+          <button class="btn btn-warning w-100 btn-lg" onclick="girarParte('arma')">Girar</button>
         </div>
       </div>
     </div>
 
-    <div class="mt-4">
-      <button class="btn btn-success btn-lg" onclick="girarTodo()">🌀 Crear Personaje</button>
+    <div class="mt-5">
+      <button class="btn btn-success btn-xl btn-lg" onclick="girarTodo()">🌀 Crear Personaje</button>
     </div>
 
     <div class="mt-5">
       <h4 class="text-warning">Tu personaje:</h4>
-      <p id="descripcionFinal" class="fs-5 fw-semibold"></p>
+      <p id="descripcionFinal" class="fs-4 fw-semibold"></p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
-

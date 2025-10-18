@@ -1,5 +1,5 @@
 body {
-  font-family: "Cinzel Decorative", "Poppins", serif;
+  font-family: 'MedievalSharp', cursive;
   background-image: url("https://img6.arthub.ai/64b27a9a-5f7f.webp");
   background-size: cover;
   background-position: center;
@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   position: relative;
   z-index: 0;
+  font-size: 1.1rem;
 }
 
 body::before {
@@ -20,25 +21,55 @@ body::before {
   z-index: -1;
 }
 
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 15px gold;
+}
+
+/* Slots fijos y estructura interna */
 .slot {
-  transition: transform 0.6s ease;
-  min-height: 280px;
+  width: 100%;
+  height: 480px; /* alto fijo */
   background: rgba(40, 40, 40, 0.7);
   backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* distribuye cabecera, imagen y texto/botón */
+  box-sizing: border-box;
 }
 
-.slot.girando {
-  transform: rotateY(360deg);
-}
-
-h1 {
-  text-shadow: 0 0 10px gold;
+/* Contenedor fijo para la imagen */
+.img-container {
+  flex: 1; /* ocupa todo el espacio restante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 180px; /* contenedor mínimo */
+  max-height: 220px; /* límite máximo */
+  width: 100%;
 }
 
 img {
-  max-height: 100px;
+  max-height: 100%;
+  max-width: 100%;
   object-fit: contain;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 5px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.img-girando {
+  transform: rotateX(360deg);
+}
+
+.oculto {
+  display: none;
+}
+
+button.btn-lg {
+  font-size: 1.1rem;
+  padding: 0.7rem 0;
 }
